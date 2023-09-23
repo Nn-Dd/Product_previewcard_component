@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+body {
+  background-color: #f3eae3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This sets the body to take up the full viewport height */
+  flex-direction: column;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  display: flex;
+  margin-bottom: 20px;
+  /* height: 53vh; */
+  width: 35vw;
+}
+
+.left,
+.right {
+  width: 100%;
+}
+
+.img-responsive.mobile {
+  display: none;
+}
+
+.left img {
+  height: 100%;
+  width: 100%;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+}
+.left {
+  flex: 1;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+}
+.right {
+  flex: 1;
+  margin: 20px;
+}
+.right h3 {
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 8px;
+  color: #7c7c86;
+}
+
+.right h1 {
+  font-family: Fraunces;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.right p {
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #7c7c86;
+}
+
+.price {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.price h2 {
+  font-family: Fraunces;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3d8168;
+}
+.price h3 {
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #7c7c86;
+}
+.button {
+  background-image: linear-gradient(to right, #3d8168, #1a4031);
+  background-size: 300% 100%;
+  border: none;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  padding: 20px 82px 20px 82px;
+  cursor: pointer;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.button:hover,
+.button:active {
+  background-position: 100% 0;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .img-responsive {
+    display: none;
+  }
+  .img-responsive.mobile {
+    display: block;
+  }
+  body {
+    background-color: #f3eae3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-direction: column;
+  }
+  .card {
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    margin-bottom: 20px;
+    height: auto;
+    width: auto;
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .left img {
+    border-bottom-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .left,
+  .right {
+    width: auto;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 769px) {
+  .card {
+    width: 85vw;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .img-responsive {
+    display: block;
+  }
+  .img-responsive.mobile {
+    display: none;
+  }
+  body {
+    background-color: #f3eae3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-direction: column;
+  }
+  .card {
+    background-color: #fff;
+    border-radius: 16px;
+    display: flex;
+    margin-bottom: 20px;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    margin: 10px;
+  }
+
+  .left img {
+    border-bottom-left-radius: 16px;
+    border-top-right-radius: 0px;
+  }
+
+  .left,
+  .right {
+    width: auto;
+  }
+}
+
+@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .card {
+    width: 68vw;
+  }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1024px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  .card {
+    width: 68vw;
+  }
+}
